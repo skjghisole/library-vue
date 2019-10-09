@@ -19,12 +19,7 @@
 			addAuthor(e) {
 				e.preventDefault()
 				const { name, age, $apollo } = this
-				const author = {
-					name,
-					age
-				}
-
-				const newAuthor = $apollo.mutate({
+				$apollo.mutate({
 					mutation: addAuthorQuery,
 					variables: {
 						name,

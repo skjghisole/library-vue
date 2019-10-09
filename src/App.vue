@@ -1,38 +1,31 @@
 <template>
-  <div>
-    <Books :books="books" />
-    <Authors :authors="authors" />
-    <AddAuthor />
-    <AddBook :authors="authors" />
-  </div>
+	<div id="app">
+		<div id="nav">
+			<Header>
+				
+			</Header>
+		</div>
+		<router-view/>
+	</div>
 </template>
 
 <script>
-  import Books from './components/Books'
-  import Authors from './components/Authors'
-  import AddAuthor from './components/AddAuthor'
-  import AddBook from './components/AddBook'
-  import { getBooksQuery, getAuthorsQuery } from './queries'
-  export default {
-    name: 'App',
-    components: {
-      Books,
-      Authors,
-      AddAuthor,
-      AddBook
-    },
-    apollo: {
-      books: getBooksQuery,
-      authors: getAuthorsQuery,
-    },
-    data () {
-      return {
-        books: [],
-        authors: []
-      }
-    }
-  }
+	import Header from './components/layout/Header'
+	export default {
+		name: "app",
+		components: {
+			Header
+		}
+	}
 </script>
 
-<style lang="css" scoped>
+<style lang="css">
+	* {
+		box-sizing: border-box;
+		margin: 0px;
+		padding: 0px;
+	}
+	body {
+		line-height: 1.4;
+	}
 </style>
