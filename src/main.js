@@ -8,7 +8,7 @@ Vue.config.productionTip = false
 
 const apolloClient = new ApolloClient({
   // You should use an absolute URL here
-  uri: 'http://localhost:3030/graphql'
+  uri: 'https://skjghisole-library-gql-server.herokuapp.com/graphql'
 })
 
 const apolloProvider = new VueApollo({
