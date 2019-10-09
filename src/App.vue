@@ -10,12 +10,16 @@
 <script>
   import Books from './components/Books'
   import Authors from './components/Authors'
+  import AddAuthor from './components/AddAuthor'
+  import AddBook from './components/AddBook'
   import { getBooksQuery, getAuthorsQuery } from './queries'
   export default {
     name: 'App',
     components: {
       Books,
       Authors,
+      AddAuthor,
+      AddBook
     },
     apollo: {
       books: getBooksQuery,
