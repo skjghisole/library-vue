@@ -25,7 +25,8 @@
 						name,
 						age: ~~age
 					},
-					refetchQueries: [{ query: getAuthorsQuery }]
+					refetchQueries: [{ query: getAuthorsQuery }],
+					awaitRefetchQueries: true
 				})
 
 				this.name = ''

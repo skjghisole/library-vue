@@ -27,7 +27,8 @@
 						name,
 						genre,
 					},
-					refetchQueries: [{ query: getBooksQuery }]
+					refetchQueries: [{ query: getBooksQuery }],
+					awaitRefetchQueries: true
 				})
 
 				this.authorId = ''
