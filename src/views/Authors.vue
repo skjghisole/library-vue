@@ -6,20 +6,11 @@
 
 <script>
 	import AuthorList from '../components/Authors'
-	import { getAuthorsQuery, authorAddedSubscription } from '../queries'
+	import { getAuthorsQuery } from '../queries'
 	export default {
 		name: "Authors view",
 		apollo: {
-			authors: {
-				query: getAuthorsQuery,
-				subscribeToMore: {
-					document: authorAddedSubscription,
-					updateQuery: (previousResult, { subscriptionData }) => {
-						console.log(previousResult)
-						console.log(subscriptionData)
-					},
-				}
-			}
+			authors: getAuthorsQuery
 		},
 		components: {
 			AuthorList
