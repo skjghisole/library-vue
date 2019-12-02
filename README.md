@@ -1,4 +1,4 @@
-## Library app using bare bones of Vue
+## Library app using the bare bones of Vue
 # client-vue
 
 ## Project setup
